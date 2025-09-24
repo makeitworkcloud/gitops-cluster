@@ -1,17 +1,58 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: makeitwork-admin-password
+    namespace: aap
+    annotations:
+        kustomize.config.k8s.io/behavior: replace
+type: Opaque
+data:
+    password: ENC[AES256_GCM,data:r/n/l1fqpE72GYraaLYPMoS4LIy0dAoDmxtAcJCrhGtZ4WxVLOgc25wpc64=,iv:wLqYSQ4qSO/syjizpQCSYJQnx4PdH5Q4kavwj59yMBI=,tag:FER5ByM8nCECpAMXUSzyDA==,type:str]
+sops:
+    age:
+        - recipient: age152ek83tm4fj5u70r3fecytn4kg7c5xca24erjchxexx4pfqg6das7q763l
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAzK25WRGE5czJBTFYvNDhr
+            UDFKeTNlWTN0MUllR3drdjFGYUFMTnQ5MlJNCktROFd5M1VFZHJTT1A1WThuaHM1
+            VklkbkZuY0tscHY5Y09sNkFEZTNQZWsKLS0tIDJ6aWUxSHR6K2RkVWNzRlJmLzR0
+            WENSaTE0ck5pSFpsd3BPdERreFpndUEKUarJvMHr6BwHcutwMxryHY+9diADtgqb
+            OQieidE4PilPlG/mSQBL+Q4oTTEdFbRINjtOjAMs2+qt+XrrQADwIg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-24T22:10:58Z"
+    mac: ENC[AES256_GCM,data:WDujDWJvIGSK9HT7qs7qUymrc72X7oGrgSy8dsBBE452NV7ziYjhvtgJzS4U9uOmhGFB3QGigInrT2+f43RpAdqhsl33Sv7NKKYSm3T5LW84JaxBNBKYWiJy60gJeI5RtmS1E6EFYEdy+iU5iriWfePlYhvuCum9cpVu0j+1A/Q=,iv:dioxqhmXwAV7nz9DVT7fr4EGBcixsMcoGRhVLm7cC+g=,tag:BGzljGrIEoe0wjONl5zOgg==,type:str]
+    encrypted_regex: ^(password)$
+    version: 3.10.2
 ---
 apiVersion: aap.ansible.com/v1alpha1
 kind: AnsibleAutomationPlatform
 metadata:
-  name: aap
-  namespace: aap
-  annotations:
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    name: aap
+    namespace: aap
+    annotations:
+        argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
-  route_tls_termination_mechanism: Edge
-  no_log: true
-  api:
-    log_level: INFO
-    replicas: 1
-  ingress_type: Route
-  route_host: ansible.makeitwork.cloud
-  route_tls_secret: makeitwork-tls
+    route_tls_termination_mechanism: Edge
+    no_log: true
+    api:
+        log_level: INFO
+        replicas: 1
+    ingress_type: Route
+    route_host: ansible.makeitwork.cloud
+    route_tls_secret: makeitwork-tls
+    admin_password_secret: makeitwork-admin-password
+sops:
+    age:
+        - recipient: age152ek83tm4fj5u70r3fecytn4kg7c5xca24erjchxexx4pfqg6das7q763l
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAzK25WRGE5czJBTFYvNDhr
+            UDFKeTNlWTN0MUllR3drdjFGYUFMTnQ5MlJNCktROFd5M1VFZHJTT1A1WThuaHM1
+            VklkbkZuY0tscHY5Y09sNkFEZTNQZWsKLS0tIDJ6aWUxSHR6K2RkVWNzRlJmLzR0
+            WENSaTE0ck5pSFpsd3BPdERreFpndUEKUarJvMHr6BwHcutwMxryHY+9diADtgqb
+            OQieidE4PilPlG/mSQBL+Q4oTTEdFbRINjtOjAMs2+qt+XrrQADwIg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-09-24T22:10:58Z"
+    mac: ENC[AES256_GCM,data:WDujDWJvIGSK9HT7qs7qUymrc72X7oGrgSy8dsBBE452NV7ziYjhvtgJzS4U9uOmhGFB3QGigInrT2+f43RpAdqhsl33Sv7NKKYSm3T5LW84JaxBNBKYWiJy60gJeI5RtmS1E6EFYEdy+iU5iriWfePlYhvuCum9cpVu0j+1A/Q=,iv:dioxqhmXwAV7nz9DVT7fr4EGBcixsMcoGRhVLm7cC+g=,tag:BGzljGrIEoe0wjONl5zOgg==,type:str]
+    encrypted_regex: ^(password)$
+    version: 3.10.2
