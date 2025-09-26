@@ -19,8 +19,8 @@ sops:
             WENSaTE0ck5pSFpsd3BPdERreFpndUEKUarJvMHr6BwHcutwMxryHY+9diADtgqb
             OQieidE4PilPlG/mSQBL+Q4oTTEdFbRINjtOjAMs2+qt+XrrQADwIg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-09-26T21:55:14Z"
-    mac: ENC[AES256_GCM,data:bMaFIjy5MHdJmBKhPH6G6rStiffgYroA5WuSSK/EU5+DF5EMt09VPJOO5OQvENnNeRejSCF8ErOon1VhXzauu/zspIBt1nRIKwLrTzLjoxLjCozLaoD0fwewtRecUcMTbQlfyyZ+P9LJAljwqgqMLvpUEm3VQltFS1eNxs8TGpo=,iv:CwGRchsiRFimKvIywqORlTjMg73tdcysRjfwEjJ3K30=,tag:NG1dIsBenfM0O3C47fj/cg==,type:str]
+    lastmodified: "2025-09-26T21:59:23Z"
+    mac: ENC[AES256_GCM,data:7oW0hcrsOvg7suLj8sEqyfXtWJHF8l2lpXirB8YSFdTnBkdMPBFLolz4kd4a3hIFCp5OlvI9PJrj5Y44IED/CAmakCo/epb+WfL4tzBmqzfLvltADyiHAsKbhlXvJRkNs39nIRR8sXorqozI5tDDJpSAXDm/FCbf/gj3AS9EAOM=,iv:jhYQaapIyBv3/gm7XpU6gefPRNNfbrEZSTxafQa/VEg=,tag:hqIkW5XSPl4lqF3+vhVyNg==,type:str]
     encrypted_regex: ^(password)$
     version: 3.10.2
 ---
@@ -31,6 +31,7 @@ metadata:
     namespace: aap
     annotations:
         argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+        kustomize.config.k8s.io/behavior: merge
 spec:
     route_tls_termination_mechanism: Edge
     no_log: true
@@ -52,7 +53,7 @@ sops:
             WENSaTE0ck5pSFpsd3BPdERreFpndUEKUarJvMHr6BwHcutwMxryHY+9diADtgqb
             OQieidE4PilPlG/mSQBL+Q4oTTEdFbRINjtOjAMs2+qt+XrrQADwIg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-09-26T21:55:14Z"
-    mac: ENC[AES256_GCM,data:bMaFIjy5MHdJmBKhPH6G6rStiffgYroA5WuSSK/EU5+DF5EMt09VPJOO5OQvENnNeRejSCF8ErOon1VhXzauu/zspIBt1nRIKwLrTzLjoxLjCozLaoD0fwewtRecUcMTbQlfyyZ+P9LJAljwqgqMLvpUEm3VQltFS1eNxs8TGpo=,iv:CwGRchsiRFimKvIywqORlTjMg73tdcysRjfwEjJ3K30=,tag:NG1dIsBenfM0O3C47fj/cg==,type:str]
+    lastmodified: "2025-09-26T21:59:23Z"
+    mac: ENC[AES256_GCM,data:7oW0hcrsOvg7suLj8sEqyfXtWJHF8l2lpXirB8YSFdTnBkdMPBFLolz4kd4a3hIFCp5OlvI9PJrj5Y44IED/CAmakCo/epb+WfL4tzBmqzfLvltADyiHAsKbhlXvJRkNs39nIRR8sXorqozI5tDDJpSAXDm/FCbf/gj3AS9EAOM=,iv:jhYQaapIyBv3/gm7XpU6gefPRNNfbrEZSTxafQa/VEg=,tag:hqIkW5XSPl4lqF3+vhVyNg==,type:str]
     encrypted_regex: ^(password)$
     version: 3.10.2
