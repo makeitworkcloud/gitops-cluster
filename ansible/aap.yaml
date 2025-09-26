@@ -15,12 +15,11 @@ sops:
             -----BEGIN AGE ENCRYPTED FILE-----
             YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAzK25WRGE5czJBTFYvNDhr
             UDFKeTNlWTN0MUllR3drdjFGYUFMTnQ5MlJNCktROFd5M1VFZHJTT1A1WThuaHM1
-            VklkbkZuY0tscHY5Y09sNkFEZTNQZWsKLS0tIDJ6aWUxSHR6K2RkVWNzRlJmLzR0
+            VklkbkZuY0tscHY5Y09sNkFEZTNQZWsKzLS0tIDJ6aWUxSHR6K2RkVWNzRlJmLzR0
             WENSaTE0ck5pSFpsd3BPdERreFpndUEKUarJvMHr6BwHcutwMxryHY+9diADtgqb
             OQieidE4PilPlG/mSQBL+Q4oTTEdFbRINjtOjAMs2+qt+XrrQADwIg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-09-26T21:46:07Z"
-    mac: ENC[AES256_GCM,data:lZnHZzJH7HvGcTdcn1n51Cv2zTS8+WuyU/+mbrHlLtQe93lCLR0AjgDdz+rz2fXR0ZYEmnoy78TFBY8fzdJ7M1yqlLK5ilbnSUzYRt+kgUek8QAK77bP94tHOvKXG2zsQPBTUYUxppBCrEnlrwvVqMfvjgu+2JykUhUyYCff9Qg=,iv:8IsZDiSuSdW7kqEZ6s10VYcQHA9LKeOT1eeq5R4o9xg=,tag:FAylMfJgvcN9p2W6ADYS+Q==,type:str]
+    lastmodified: "2025-09-26T21:46:07Z"fzdJ7M1yqlLK5ilbnSUzYRt+kgUek8QAK77bP94tHOvKXG2zsQPBTUYUxppBCrEnlrwvVqMfvjgu+2JykUhUyYCff9Qg=,iv:8IsZDiSuSdW7kqEZ6s10VYcQHA9LKeOT1eeq5R4o9xg=,tag:FAylMfJgvcN9p2W6ADYS+Q==,type:str]
     encrypted_regex: ^(password)$
     version: 3.10.2
 ---
