@@ -1,3 +1,3 @@
 # gitops-cluster
 
-GitOps cluster configs using Kustomize, intended to be an Argo CD app.
+GitOps cluster configs using Kustomize.  Requires Argo CD with KSOPS and an appropriate AGE private key to decrypt secret values.
